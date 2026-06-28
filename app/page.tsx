@@ -10,6 +10,7 @@ export default function HomePage() {
       <Link href="/hotels">Hotels</Link>
       <br />
       <Link href="/services">Services</Link>
+      <Footer />
     </main>
     
   );
