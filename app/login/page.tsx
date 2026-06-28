@@ -39,7 +39,8 @@ async function sendAdminCode(formData: FormData) {
   });
 
   if (error) {
-    redirect("/login?error=send_failed");
+    console.error("OTP SEND ERROR:", error);
+    redirect(`/login?error=${encodeURIComponent(error.message)}`);
   }
 
   redirect(`/login?sent=1&email=${encodeURIComponent(email)}`);
@@ -144,8 +145,8 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               A one-time code was sent to <strong>{email}</strong>.
             </p>
 
-            {error === "invalid_code" && (
-              <p className="loginError">Invalid or expired code.</p>
+            {error && (
+              <p className="loginError">{error}</p>
             )}
 
             {error === "missing_code" && (
