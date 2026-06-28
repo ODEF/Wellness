@@ -1,6 +1,7 @@
-import img from "next/image";
-import styles from "./Footer.module.css";
+import React from "react";
 
+import styles from "./Footer.module.css";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
         */}
 
         <div className="right flex w-full flex-col items-center gap-y-6 md:flex-row md:justify-between md:gap-y-0">
-          <img src="/assets/wellness-logo.png" alt="Healthy Paw Logo" className="h-12 w-auto" />
+          <Image src="../../public/assets/wellness-logo.jpeg" alt="Healthy Paw Logo" className="h-12 w-auto" />
           <p className="text-sm text-blue-gray-500">
             &copy; 2024 Healthy Paw. All rights reserved.
           </p>
