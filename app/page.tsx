@@ -1,5 +1,6 @@
 import react from "react";
 import Link from "next/link";
+import Footer from "@/components/layout/Footer"
 export default function HomePage() {
   return (
     <main style={{ padding: "40px" }}>
@@ -10,5 +11,6 @@ export default function HomePage() {
       <br />
       <Link href="/services">Services</Link>
     </main>
+    
   );
 }
